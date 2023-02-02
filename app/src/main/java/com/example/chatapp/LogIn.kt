@@ -12,6 +12,7 @@ class LogIn : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
+        supportActionBar?.hide()
         mAuth = FirebaseAuth.getInstance()
 
         signup.setOnClickListener {
@@ -31,10 +32,11 @@ class LogIn : AppCompatActivity() {
     private fun login(email: String, password: String) {
         mAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
+                if (task.isSuccessful)
+                {
                     // Sign in success, update UI with the signed-in user's information
-                val intent1=Intent(this@LogIn,MainActivity::class.java)
-                    startActivity(intent1)
+                val intent=Intent(this@LogIn,MainActivity::class.java)
+                    startActivity(intent)
 
                 } else {
                     // If sign in fails, display a message to the user.
