@@ -26,6 +26,10 @@ class LogIn : AppCompatActivity() {
 
             login(email1, password)
         }
+        skip.setOnClickListener {
+            val intent=Intent(this@LogIn,MainActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

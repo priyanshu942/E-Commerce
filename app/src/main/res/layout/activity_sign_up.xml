@@ -38,6 +38,7 @@
         android:background="@drawable/edit"
         android:clipToOutline="true"
         android:hint="Email"
+        android:inputType="textEmailAddress"
         android:paddingLeft="10dp"
         android:outlineSpotShadowColor="@color/black"
         android:textColorHint="@color/black" />
@@ -48,7 +49,7 @@
         android:paddingLeft="10dp"
         android:hint="Password"
         android:id="@+id/pass"
-
+        android:inputType="textPassword"
         android:background="@drawable/edit"
         android:layout_marginLeft="30dp"
         android:textColorHint="@color/black"

@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".MainActivity"
     >
     <LinearLayout
@@ -13,23 +13,36 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@color/purple_1"
+            >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ham"
+                android:clickable="true"
+                />
         <SearchView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:iconifiedByDefault="false"
+            android:id="@+id/search"
+            android:queryBackground="@color/white"
             android:queryHint="Enter the Item to Search"
-
             />
-          <ImageView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:src="@drawable/crt"
+                android:clickable="true"
+                />
+
         </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/RecView"
             android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"/>
 

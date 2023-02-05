@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
-class Adapt(val context: Context,val users:ArrayList<tim>):RecyclerView.Adapter <Adapt.userView>(){
+class Adapt(val context: Context,val users:Array<Int>):RecyclerView.Adapter <Adapt.userView>(){
 
 
 
@@ -20,7 +20,7 @@ class Adapt(val context: Context,val users:ArrayList<tim>):RecyclerView.Adapter 
 
     override fun onBindViewHolder(holder: userView, position: Int) {
         val pimg=users[position]
-        holder.img.setImageResource(pimg.img)
+        holder.img.setImageResource(pimg)
 
     }
 
