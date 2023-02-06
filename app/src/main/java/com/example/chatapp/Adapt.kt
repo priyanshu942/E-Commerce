@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
-class Adapt(val context: Context,val users:Array<Int>):RecyclerView.Adapter <Adapt.userView>(){
+class Adapt(val context: Context,val users:Array<Int>,val usert:Array<String>):RecyclerView.Adapter <Adapt.userView>(){
 
 
 
@@ -20,7 +20,9 @@ class Adapt(val context: Context,val users:Array<Int>):RecyclerView.Adapter <Ada
 
     override fun onBindViewHolder(holder: userView, position: Int) {
         val pimg=users[position]
+        val text=usert[position]
         holder.img.setImageResource(pimg)
+        holder.txt.setText(text)
 
     }
 
@@ -30,6 +32,7 @@ class Adapt(val context: Context,val users:Array<Int>):RecyclerView.Adapter <Ada
 
     class userView(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val img=itemView.findViewById<ImageView>(R.id.imj)
+        val txt=itemView.findViewById<TextView>(R.id.txt)
 
     }
 
