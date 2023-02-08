@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ChatApp</string>
     <string name="sign_up"><u>Sign up</u></string>
+    <string name="all_phones">All phones</string>
+    <string name="view_all"><u>View All</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

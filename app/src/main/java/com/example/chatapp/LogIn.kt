@@ -30,7 +30,7 @@ class LogIn : AppCompatActivity() {
             val intent=Intent(this@LogIn,MainActivity::class.java)
             startActivity(intent)
         }
-
+    
     }
 
     private fun login(email: String, password: String) {
