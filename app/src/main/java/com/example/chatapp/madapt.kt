@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class madapt(val context1: Context,val array: Array<Int>,val array1: Array<String>) :RecyclerView.Adapter<madapt.card>(){
+class madapt(val context1: Context,val array: ArrayList<Int>,val array1: ArrayList<String>) :RecyclerView.Adapter<madapt.card>(){
 
 
 

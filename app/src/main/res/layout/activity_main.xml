@@ -1,54 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="@color/white"
+    android:id="@+id/drawer"
     >
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appbar"
+        android:backgroundTint="@color/white"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="E-commerce"
+            android:theme="@style/ThemeOverlay.SearchView"
+            app:navigationIcon="@drawable/ic_menu"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <androidx.drawerlayout.widget.DrawerLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/purple_1"
-            >
+            android:layout_marginTop="45dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="50dp"
-                android:src="@drawable/ham"
-                android:clickable="true"
-                android:contextClickable="true"
-
-                />
-        <SearchView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:iconifiedByDefault="false"
-            android:id="@+id/search"
-            android:queryBackground="@color/white"
-            android:queryHint="Enter the Item to Search"
-            />
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="50dp"
-                android:src="@drawable/crt"
-                android:clickable="true"
-                />
-
-        </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/RecView"
             android:layout_marginTop="20dp"
@@ -59,6 +52,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:orientation="horizontal"
             android:background="#F7FFFFFF"
@@ -118,15 +112,10 @@
 
                 </LinearLayout>
 
-
-
-
         </LinearLayout>
-
-
-
+        
     </LinearLayout>
-        </androidx.drawerlayout.widget.DrawerLayout>
+
     </ScrollView>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -138,3 +127,15 @@
         />
 
 </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/layout_header"
+        app:menu="@menu/slidebar"
+        android:id="@+id/nav_view"
+        android:fitsSystemWindows="true">
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

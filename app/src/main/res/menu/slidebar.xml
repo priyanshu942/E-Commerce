@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:id="@+id/wish"
+    android:title="Wishlist"
+        android:icon="@drawable/heart">
+   </item>
+    <item android:id="@+id/set"
+        android:title="Setting"
+        android:icon="@drawable/ic_baseline_set">
+
+    </item>
+    <item android:id="@+id/locate"
+        android:title="Track Orders"
+        android:icon="@drawable/ic_baseline_locate">
+    </item>
+    <item android:id="@+id/his"
+        android:title="History"
+        android:icon="@drawable/ic_baseline_cloc">
+    </item>
+    <item android:id="@+id/Faq"
+        android:title="FAQs"
+        android:icon="@drawable/ic_baseline_ques">
+
+    </item>
+    <item android:id="@+id/supp"
+        android:title="Support"
+        android:icon="@drawable/ic_baseline_support_agent_24">
+
+    </item>
+    <item android:id="@+id/About"
+        android:title="About Us"
+        android:icon="@drawable/ic_baseline_info">
+
+    </item>
+</menu>

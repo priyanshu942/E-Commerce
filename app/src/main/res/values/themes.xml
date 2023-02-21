@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ChatApp" parent="Theme.AppCompat.Light">
+    <style name="Theme.ChatApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -21,5 +21,18 @@
         <item name="background">@drawable/user</item>
         <item name="strokeWidth">6dp</item>
 
+    </style>
+    <style name="circle" parent="ShapeAppearance.Material3.MediumComponent" >
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">50%</item>
+        <item name="cornerSizeTopRight">50%</item>
+        <item name="cornerSizeBottomRight">50%</item>
+        <item name="cornerSizeBottomLeft">50%</item>
+        <item name="strokeWidth">6dp</item>
+
+    </style>
+    <style name="ThemeOverlay.SearchView" parent="">
+<item name="android:editTextColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
     </style>
 </resources>

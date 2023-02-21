@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
-class Adapt(val context: Context,val users:Array<Int>,val usert:Array<String>):RecyclerView.Adapter <Adapt.userView>(){
+class Adapt(val context: Context,val users:ArrayList<Int>,val usert:ArrayList<String>):RecyclerView.Adapter <Adapt.userView>(){
 
 
 
