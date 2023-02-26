@@ -13,7 +13,7 @@
 <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
-
+    
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:id="@+id/appbar"
@@ -31,7 +31,6 @@
             />
 
     </com.google.android.material.appbar.AppBarLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -53,7 +52,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="25dp"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:orientation="horizontal"
             android:background="#F7FFFFFF"
             tools:context=".MainActivity">
@@ -84,37 +82,273 @@
                                 android:text="@string/all_phones"
                                 android:textSize="20sp"
                                 android:textColor="@color/purple_500"/>
-
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/view_all"
                                 android:layout_alignParentEnd="true"
-                                android:layout_centerVertical="true"
-                                android:textStyle="bold"
-                                android:textSize="15sp"
+                                android:layout_marginEnd="11dp"
+                                android:text="@string/view_all"
                                 android:textColor="@color/purple_500"
-                                />
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_marginTop="30dp"
+                                android:id="@+id/recycler"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            </androidx.recyclerview.widget.RecyclerView>
 
                         </RelativeLayout>
-
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recycler"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-
-                        </androidx.recyclerview.widget.RecyclerView>
-
 
                     </LinearLayout>
 
                 </LinearLayout>
 
         </LinearLayout>
-        
-    </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:elevation="80dp"
+              android:layout_marginBottom="10dp"
+              >
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Latest and Upcoming Launches"
+                  android:textFontWeight="80"
+                  android:textColor="@color/black"
+                  android:textSize="35sp"
+                  android:clickable="true"
+                  />
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+              <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+                  android:elevation="80dp">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/ph3"
+
+               />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Samsung Galaxy S22"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:clickable="true"
+                />
+              </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      >
+                      <ImageView
+                          android:layout_width="200dp"
+                          android:layout_height="200dp"
+                          android:src="@drawable/ph2"
+                          android:clickable="true"
+                          />
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="Oneplus 8T"
+                          android:textAlignment="center"
+                          android:textColor="@color/black"
+                          android:textSize="20sp"
+                          android:clickable="true"
+                          />
+                  </LinearLayout>
+              </LinearLayout>
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+                      <ImageView
+                          android:layout_width="200dp"
+                          android:layout_height="200dp"
+                          android:src="@drawable/ph2"
+                          />
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="Samsung Galaxy A51"
+                          android:textAlignment="center"
+                          android:textColor="@color/black"
+                          android:textSize="20sp"
+                          android:clickable="true"
+                          />
+                  </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+                      <ImageView
+                          android:layout_width="200dp"
+                          android:layout_height="200dp"
+                          android:src="@drawable/ph3"
+                          android:clickable="true"
+                          />
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:text="Samsung Galazy S23"
+                          android:textAlignment="center"
+                          android:textColor="@color/black"
+                          android:textSize="20sp"
+                          android:clickable="true"
+                          />
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:layout_marginEnd="11dp"
+                          android:text="@string/view_all"
+                          android:textColor="@color/purple_500"
+                          android:textSize="20sp"
+                          android:textAlignment="textEnd"
+                          android:paddingRight="15dp"
+                          android:textStyle="bold" />
+                  </LinearLayout>
+              </LinearLayout>
+
+          </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="100dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upto 50% off | New Arrivals"
+                    android:textFontWeight="80"
+                    android:textColor="@color/black"
+                    android:textSize="35sp"
+                    android:clickable="true"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:elevation="80dp">
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/pic1"
+
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Shorts"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:clickable="true"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:elevation="80dp">
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/pic2"
+                            android:clickable="true"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Skirt"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:clickable="true"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:elevation="80dp">
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/pic3"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Suit"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:clickable="true"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:elevation="80dp">
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/pic4"
+                            android:clickable="true"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Shirt"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:clickable="true"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="11dp"
+                            android:text="@string/view_all"
+                            android:textColor="@color/purple_500"
+                            android:textSize="20sp"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="23dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </ScrollView>
     <com.google.android.material.bottomnavigation.BottomNavigationView
