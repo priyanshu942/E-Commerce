@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.SearchView.OnQueryTextListener
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -49,15 +50,18 @@ class MainActivity : AppCompatActivity() {
 
             when(it.itemId) {
                 R.id.home -> {
+                    val intent=Intent(this@MainActivity,MainActivity::class.java)
+                    startActivity(intent)
                     return@setOnItemSelectedListener true
                 }
                 R.id.heart -> {
-                    val intent = Intent(this@MainActivity, LogIn::class.java)
-                    startActivity(intent)
+                    replaceFragment(WishList())
                 }
                 R.id.profile -> {
-                    val intent = Intent(this@MainActivity, LogIn::class.java)
-                    startActivity(intent)
+                    replaceFragment(Profile())
+                }
+                R.id.cart->{
+                    replaceFragment(Cart())
                 }
 
             }
@@ -71,6 +75,14 @@ class MainActivity : AppCompatActivity() {
         arrs.addAll(arr1)
 
 
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        val fragmentManager =supportFragmentManager
+        val fragmentTransaction=fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.container,fragment)
+        fragmentTransaction.setCustomAnimations(R.anim.right,R.anim.exit)
+        fragmentTransaction.commit()
     }
 
     fun setupview()
@@ -90,6 +102,13 @@ class MainActivity : AppCompatActivity() {
         if(toggle.onOptionsItemSelected(item))
         {
             return true
+        }
+        when(item.itemId)
+        {
+            R.id.wishlist->
+            {
+                replaceFragment(WishList())
+            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -131,12 +150,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
-
-
-
         return super.onCreateOptionsMenu(menu)
-
-
     }
 
 }

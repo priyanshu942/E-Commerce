@@ -351,6 +351,13 @@
         </LinearLayout>
 
     </ScrollView>
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:id="@+id/container"
+       android:layout_marginBottom="56dp" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
